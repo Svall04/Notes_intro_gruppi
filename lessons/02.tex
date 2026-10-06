@@ -1,0 +1,78 @@
+\section{Lesson 1}
+\begin{definition}
+  
+A group is a set coupled with an internal product $ \cdot $:
+
+\begin{gather}
+ \cdot : G \times G \rightarrow G \\
+ (g_1, g_2) \rightarrow g_1 g_2
+\end{gather}
+
+ such that:
+
+ \begin{gather}
+  \text{A1:} (g_1 g_2) g_3 = g_1 (g_2 g_3) \\
+  \text{A2:}\exists e : \forall g , ge = eg = g \\
+  \text{A3:}\forall g, \exists g^{-1} : gg^{-1}  = g^{-1}g = e
+ \end{gather}
+
+\end{definition}
+\begin{definition}
+  
+A group is called abelian iff $\forall g,k \in G, gk = kg$
+\end{definition}
+\\
+One can prove  the {\bf uniqueness of the identity element}, by proof of contraddiption. Assume $e,f \in G$ are both the identity element with $f \neq e$, then $ef = f$ by A2, but also $ef = e$, which proves the claim.
+\\
+One can also prove the {\bf uniqueness of the inverse element}, again by contraddiption. Given $g, a, b \in G, a \neq b$, assume that both $a,b$ are the inverse element of g. Then, by A1 and A3:
+\[
+  ga = gb \implies (ag)a = (ag)b \implies a = b
+\]
+wich is a contraddiption of the hypothesis, proving the theorem.
+\subsection{Algebraic structures}
+There exists other algebraic structures with less proprierties of a group, we only cite them:
+\begin{itemize}
+  \item Magmas: Set with closed operation $\cdot : M \times M \rightarrow M $
+  \item Semigroup: Magma + associativity
+  \item Monoid: Semigoup + existence of the identity element
+\end{itemize}
+
+\begin{claim}[direct product]
+  Given two groups $(G, \times_1), (L,\cross_2)$ the {\bf direct product} $P = G \cross L$ of the two groups is still a group, with respect to the product defined by:
+  \begin{gather*}
+    \cdot : P \times P \rightarrow P \\
+    ((g_1,l_1), (g_2,l_2)) \rightarrow (g_1\times_1g_1, l_1\cross_2l_2)
+  \end{gather*}
+\end{claim}
+
+\begin{example}{two-element group}
+  The first non-tivial group (wich is $\{e\}$) is the group $G = \{e,a\}$.
+  \\
+  One can show that the only way to make a group with two elemets, is to define the following products:
+  \[
+    ee = e \quad ea = a \quad ae = a \quad aa=e
+  \]
+  one cannot define $ aa=a$ beacause $a$ must have an inverse element.
+\end{example}
+To rapresent the operation of $\cdot$ on the elements of the group we make use of the {\bf Cayley table}. Using the Cayley table, we can rapresent the group of the leading example as:
+    
+\begin{center}
+  \begin{tabular}{c|cc}
+    & $e$ & $a$ \\
+    \hline
+    $e$ & $ee=e$& $ea = a$ \\
+    $a$ & $ ae = a$ & $aa = e$
+  \end{tabular}
+\end{center}
+
+\begin{definition}[cardinality]
+  The caridnality of a group $|G|$ is the number of its elements.
+\end{definition}
+Groups can be finite, infinte and discrete, or infinite and continuos
+\begin{example}
+  some examples of infinte groups are $(\mathbb{Z}, +), (\mathbb{R},+), (\mathbb{R} / \{0\}, \times), (\mathbb{R}_+, \times)$
+\end{example}
+\begin{definition}[General linear group]
+  we define $GL(n) \coloneq \{(n\times n) \text{matrices with} \det \neq 0 \}$ the General linear group, with respect to matrix multiplication
+\end{definition}
+

@@ -1,0 +1,37 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{bbm}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{mathtools}
+
+% ambiente per teoremi/definizioni
+\newcounter{question}[section]
+
+\theoremstyle{plain}          % testo in corsivo
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposizione}[theorem]{Proposition}
+\newtheorem{corollario}[theorem]{Corollario}
+\newtheorem{claim}[theorem]{Claim}
+
+\theoremstyle{definition}     % testo dritto
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{example}[theorem]{Esempio}
+\newtheorem{question}{Question}[section]
+
+\theoremstyle{remark}
+\newtheorem*{osservazione}{Osservazione}   % l'asterisco toglie la numerazione
+\author{Simone Vallauri}
+\date{January 2025}
+
+\begin{document}
+
+\title{Appunti dal corso Intro Gruppi}
+
+\maketitle
+
+\input{./lessons/02.tex}
+\input{./lessons/03.tex}
+\end{document}

@@ -1,0 +1,101 @@
+\section{Lession 2}
+\begin{definition}[Dihedral groups]
+  We define Dihedral groups $D_n \cononeqq $\{symmetries preserving the shape of a regular polygon with $n$ nodes\} , with respect to the composition as the product of the group.
+\end{definition}
+
+\begin{example}[$D_2$]
+  $D_3$ is the group of symmetries of the triangle. We have 3 rotations and 3 reflections, making $|D_3| = 6$. \\
+  $D_1$ is a peculiar example, beacause $D_1 \cong  \mathbb{Z}_2 \times\mathbb{Z}_2$ (see \href{https://en.wikipedia.org/wiki/Dihedral_group}{this}) 
+
+\end{example}
+In general, $|D_n| =2n$ 
+\subsection{Orthogonal groups}
+Orthogonal groups are groups thath prsesrve the distance in an euclidian space\footnote{space with posdef metric}. In coordinates, Orthogonal groups are groups that preserve the orthogonality of the reference frame.
+\begin{definition}[Orthogonal Group]
+  We define \[
+    O(n,\mathbb{R}) \coloneqq \{ M \in GL(n) \,\, \text{such that} \,\, M^TM = MM^T = \mathbb{1} \} 
+  \]
+  $O(n,\mathbb{R}) $ is the group of all the isometries of $\mathbb{R}^n$
+\end{definition}
+
+\begin{question}
+ What does $MM^T = \mathbb{1}$ have to do with ortogonality?
+ given the map $m : V \rightarrow V $, we ask m to be an isometry with:
+ \[
+   v^i v_i = |v|^2 = |Mv|^2 = (Mv)_i(Mv)^i
+ \]
+\end{question}
+
+\textbf{MISSING!!}:Lie groups.
+\subsection{More definitions}
+\begin{definition}
+  Given $(G,\cdot)$, a subset $H \subset G$, H is a \textbf{subroup} iff  $(H, \cdot)$ is a group. \\
+  Every group has two \textbf{improper subgruop}: $\{e\}, G$; all groups that are not improper are \textbf{proper}. \\
+  A subgroup H is defined \textbf{normal} iff $\forall h \in H, \forall g \in g, ghg^{-1} \in H$.
+
+\end{definition}
+  \begin{definition}
+  A group G is defined:
+  \begin{itemize}
+    \item \textbf{semisimple} iff none of its proper groups are normal and abelian.
+    \item \textbf{simple} iff none of its proper groups are normal.
+  \end{itemize}
+  N.B.: Being seminormal is more stringent than being nornaml, for a Gruoup G with only one (proper) normal and non-abelian subgroup is semisimple, but not simple.
+\end{definition}
+
+\begin{definition}[Group homomorphism]
+  Given $(G_1, \cdot), (G_2, \times)$, a map $\rho : G_1 \to G_2 $ is a \textbf{group homomorphism} iff:
+  \[
+   \forall g, l\in G_1, \rho(g\cdot l) = \rho(g) \times \rho(l)
+  \]
+if the map $\rho$ is a \textbf{bijection}, then $\rho$ is an \textbf{Isomorphism}.
+If there exists an ismomorphism between two groups, they are called \textbf{isomorphic} 
+\end{definition}
+\begin{claim}
+  In the set of all groups, being isomrphic is an equivalence relation
+\end{claim}
+
+\begin{definition}[Generating set of a grop]
+  Given the group $G$ and the subset $S \in G$, the group $\langle S \rangle$ is the smallest subgroup of $G$ contianing all elements of S.\\
+  Its elemewnts are called \textbf{letters}, and a generic product is called a \textbf{word}. \\
+\end{definition}
+
+\begin{definition}[Generartors of a group]
+  Given a group G, the smallest subset  $S={s_1,s_2,\dots}$,  $ S \subset G$ such that:
+  \[
+    \forall g \in G, \, g = s_{j_1}^{i_1}s_{j_2}^{i_2}s_{j_3}^{i_3} \dots
+  \]
+  is called \textbf{generator of the group G}, and its elements are called generators. \\
+  In simple words, the smallest $S$ such that $\langle S \rangle = G$ is a generator of G.
+\end{definition}
+for some generating set $S$, there can be products such that
+\[
+  r = s_{j_1}^{i_1}s_{j_2}^{i_2}s_{j_3}^{i_3} \dots = e
+\]
+Such product is called a \textbf{relation}
+\begin{definition}[Presentation of a group]
+  A presentation of a group is a way to describe a group by describing its \textbf{generators} and its \textbf{relations}.\\
+  For example, $\mathbb{Z}_n = \langle a | a^n \rangle$
+\end{definition}
+\section{Examples of groups}
+
+\begin{definition}[Cyclic groups]
+  As seen above, abstract cycle groups are groups with only one generator.
+\end{definition}
+Rapresentnation of cyclic groups include:
+\begin{enumerate}
+  \item $\mathbb{Z}_n = \{1, a, a^2, a^3,\dots a^{n-1}\}$ with respect to the product as group product
+  \item 
+$\mathbb{Z}_{n} = \mathbb{N} / (\cong (\text{mod n} )) = {0,1,2\dots,n-1}$ with respect to the addition modulo n
+\item 
+Rotational simmetries on $n$-regular polygon
+\item
+$\mathbb{Z}_n = \{ e^{i2k\pi / n} \}$ the points on the unit complex circle, with $ \cdot$ as the product composition.
+\end{enumerate}
+
+for $n =1,2,3,5$ the only groups with $|G| = n$ are $\mathbb{Z}_n$. The only exception is for $n=4$, as $\mathbb{Z}_2 \times \mathbb{Z}_2 \ncong \mathbb{Z}_4$. It turns out that:
+\[
+  \mathbb{Z}_2 \times \mathbb{Z}_2 = \langle (e,a), (a,e) | (e,a)^2, (a,e)^2 \rangle
+\]
+
+
