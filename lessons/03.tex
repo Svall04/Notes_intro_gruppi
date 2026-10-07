@@ -1,25 +1,25 @@
-\section{Lession 2}
+\section{Lesson 2}
 \begin{definition}[Dihedral groups]
-  We define Dihedral groups $D_n \cononeqq $\{symmetries preserving the shape of a regular polygon with $n$ nodes\} , with respect to the composition as the product of the group.
+  We define Dihedral groups $D_n \coloneqq $\{symmetries preserving the shape of a regular polygon with $n$ nodes\} , with respect to the composition as the product of the group.
 \end{definition}
 
 \begin{example}[$D_2$]
   $D_3$ is the group of symmetries of the triangle. We have 3 rotations and 3 reflections, making $|D_3| = 6$. \\
-  $D_1$ is a peculiar example, beacause $D_1 \cong  \mathbb{Z}_2 \times\mathbb{Z}_2$ (see \href{https://en.wikipedia.org/wiki/Dihedral_group}{this}) 
+  $D_1$ is a peculiar example, because $D_1 \cong  \mathbb{Z}_2 \times\mathbb{Z}_2$ (see \href{https://en.wikipedia.org/wiki/Dihedral_group}{this}) 
 
 \end{example}
 In general, $|D_n| =2n$ 
 \subsection{Orthogonal groups}
-Orthogonal groups are groups thath prsesrve the distance in an euclidian space\footnote{space with posdef metric}. In coordinates, Orthogonal groups are groups that preserve the orthogonality of the reference frame.
+Orthogonal groups are groups that preserve the distance in an Euclidian space\footnote{space with posdef metric}. In coordinates, Orthogonal groups are groups that preserve the orthogonality of the reference frame.
 \begin{definition}[Orthogonal Group]
   We define \[
-    O(n,\mathbb{R}) \coloneqq \{ M \in GL(n) \,\, \text{such that} \,\, M^TM = MM^T = \mathbb{1} \} 
+    O(n,\mathbb{R}) \coloneqq \{ M \in GL(n) \,\, \text{such that} \,\, M^T M = MM^T = \mathbb{1} \} 
   \]
   $O(n,\mathbb{R}) $ is the group of all the isometries of $\mathbb{R}^n$
 \end{definition}
 
 \begin{question}
- What does $MM^T = \mathbb{1}$ have to do with ortogonality?
+ What does $MM^T = \mathbb{1}$ have to do with orthogonality?
  given the map $m : V \rightarrow V $, we ask m to be an isometry with:
  \[
    v^i v_i = |v|^2 = |Mv|^2 = (Mv)_i(Mv)^i
@@ -29,8 +29,8 @@ Orthogonal groups are groups thath prsesrve the distance in an euclidian space\f
 \textbf{MISSING!!}:Lie groups.
 \subsection{More definitions}
 \begin{definition}
-  Given $(G,\cdot)$, a subset $H \subset G$, H is a \textbf{subroup} iff  $(H, \cdot)$ is a group. \\
-  Every group has two \textbf{improper subgruop}: $\{e\}, G$; all groups that are not improper are \textbf{proper}. \\
+  Given $(G,\cdot)$, a subset $H \subset G$, H is a \textbf{subgroup} iff  $(H, \cdot)$ is a group. \\
+  Every group has two \textbf{improper subgroup}: $\{e\}, G$; all groups that are not improper are \textbf{proper}. \\
   A subgroup H is defined \textbf{normal} iff $\forall h \in H, \forall g \in g, ghg^{-1} \in H$.
 
 \end{definition}
@@ -40,7 +40,7 @@ Orthogonal groups are groups thath prsesrve the distance in an euclidian space\f
     \item \textbf{semisimple} iff none of its proper groups are normal and abelian.
     \item \textbf{simple} iff none of its proper groups are normal.
   \end{itemize}
-  N.B.: Being seminormal is more stringent than being nornaml, for a Gruoup G with only one (proper) normal and non-abelian subgroup is semisimple, but not simple.
+  N.B.: Being semisimple is more stringent than being normal, for a group G with only one (proper) normal and non-Abelian subgroup is semisimple, but not simple.
 \end{definition}
 
 \begin{definition}[Group homomorphism]
@@ -49,18 +49,18 @@ Orthogonal groups are groups thath prsesrve the distance in an euclidian space\f
    \forall g, l\in G_1, \rho(g\cdot l) = \rho(g) \times \rho(l)
   \]
 if the map $\rho$ is a \textbf{bijection}, then $\rho$ is an \textbf{Isomorphism}.
-If there exists an ismomorphism between two groups, they are called \textbf{isomorphic} 
+If there exists an isomorphism between two groups, they are called \textbf{isomorphic} 
 \end{definition}
 \begin{claim}
-  In the set of all groups, being isomrphic is an equivalence relation
+  In the set of all groups, being isomorphic is an equivalence relation
 \end{claim}
 
 \begin{definition}[Generating set of a grop]
-  Given the group $G$ and the subset $S \in G$, the group $\langle S \rangle$ is the smallest subgroup of $G$ contianing all elements of S.\\
-  Its elemewnts are called \textbf{letters}, and a generic product is called a \textbf{word}. \\
+  Given the group $G$ and the subset $S \in G$, the group $\langle S \rangle$ is the smallest subgroup of $G$ containing all elements of S.\\
+  Its elements are called \textbf{letters}, and a generic product is called a \textbf{word}. \\
 \end{definition}
 
-\begin{definition}[Generartors of a group]
+\begin{definition}[Generators of a group]
   Given a group G, the smallest subset  $S={s_1,s_2,\dots}$,  $ S \subset G$ such that:
   \[
     \forall g \in G, \, g = s_{j_1}^{i_1}s_{j_2}^{i_2}s_{j_3}^{i_3} \dots
@@ -78,7 +78,7 @@ Such product is called a \textbf{relation}
   For example, $\mathbb{Z}_n = \langle a | a^n \rangle$
 \end{definition}
 \section{Examples of groups}
-
+\subsection{Cyclic groups}
 \begin{definition}[Cyclic groups]
   As seen above, abstract cycle groups are groups with only one generator.
 \end{definition}
@@ -88,14 +88,146 @@ Rapresentnation of cyclic groups include:
   \item 
 $\mathbb{Z}_{n} = \mathbb{N} / (\cong (\text{mod n} )) = {0,1,2\dots,n-1}$ with respect to the addition modulo n
 \item 
-Rotational simmetries on $n$-regular polygon
+Rotational symmetries on $n$-regular polygon
 \item
 $\mathbb{Z}_n = \{ e^{i2k\pi / n} \}$ the points on the unit complex circle, with $ \cdot$ as the product composition.
 \end{enumerate}
 
-for $n =1,2,3,5$ the only groups with $|G| = n$ are $\mathbb{Z}_n$. The only exception is for $n=4$, as $\mathbb{Z}_2 \times \mathbb{Z}_2 \ncong \mathbb{Z}_4$. It turns out that:
+for $n =1,2,3,5$ the only groups with $|G| = n$ are $\mathbb{Z}_n$. The only exception is for $n=4$, as $\mathbb{Z}_2 \times \mathbb{Z}_2 \ncong \mathbb{Z}_4$. In fact, it turns out that:
 \[
   \mathbb{Z}_2 \times \mathbb{Z}_2 = \langle (e,a), (a,e) | (e,a)^2, (a,e)^2 \rangle
 \]
 
+\subsection{Dihedral group}
+The two groups of order $6$ are $\mathbb{Z}_6$ and $D_3$, the group of the symmetries of the triangle.\\
+$D_3$ can be represented as $D_3 = \{e,a,b,aba,ab,ba \}$. The Cayley table is:
+
+\begin{center}
+\begin{tabular}{c|cccccc}
+  $\cdot$ & $e$ & $a$ & $b$ & $aba$ & $ab$ & $ba$ \\
+\hline
+$e$   & $e$   & $a$   & $b$   & $aba$ & $ab$  & $ba$  \\
+$a$   & $a$   & $e$   & $ab$  & $ba$  & $b$   & $aba$ \\
+$b$   & $b$   & $ba$  & $e$   & $ab$  & $aba$ & $a$   \\
+$aba$ & $aba$ & $ab$  & $ba$  & $e$   & $a$   & $b$   \\
+$ab$  & $ab$  & $aba$ & $a$   & $b$   & $ba$  & $e$   \\
+$ba$  & $ba$  & $b$   & $aba$ & $a$   & $e$   & $ab$  \\
+\end{tabular}
+\end{center}
+
+Where $a,b,aba$ are the reflections, and $e,ab,ba$ are the rotations of $0,120,240$ degrees. The table can be built nothing that $(ab)^3 =e$. In fact, for $D_3$ one can notice that:
+\[
+  D_3 = \langle a, b | a^2, b^2, (ab)^3, (ba)^3 \rangle
+\]
+These properties allow the computation of some product of the table. For example, one can compute $b(aba)$ (row 3, col 4) by:
+\[
+  ababab = e \implies (aa)baba(bb) = ab \implies abab = ba
+\]
+\subsection{Permutations}
+\begin{definition}
+Given the set $X$, $X \neq \{ \O \}$, a \textbf{permutation} is a bijective map:
+\[
+  f: X \to X
+\]
+The set of all permutations is called \textbf{Symmetric group}
+\[
+S_n = \text{Perm} ( X ) = \{f:X\to X \text{bijective}\}
+\] 
+and it forms a group with respect to map composition
+\end{definition}
+Some permutations we already encountered are $S_1 = \{e\}$, $S_2 = \{ e,a \} = \mathbb{Z}_2$, $S_3 = D_3$. 
+
+\subsubsection{Representing permutations}
+The first way to represent a permutation is by the \textbf{two-lines} notation:
+\[
+\sigma = \begin{pmatrix}
+1 & 2 & 3 & \dots & n \\
+\sigma(1) & \sigma(2) & \sigma(3) & \dots & \sigma(n)
+\end{pmatrix}
+\]
+The first line contains the elements of the set, the second line contains what the elements are mapped to.
+\\
+This type of representation makes it easy to combine permutations. For example, if
+ \[ 
+  A = \begin{pmatrix} 
+    1 & 2 & 3 & 4 \\ 
+    3 & 1 & 2 & 4  
+  \end{pmatrix}
+ \quad 
+  B = \begin{pmatrix} 
+    1 & 2 & 3 & 4 \\ 
+    2 & 4 & 3 & 1  
+  \end{pmatrix}
+  \]
+
+Then $AB$ is calculated right to left as $1 \to 2 \to 1, \quad 2 \to 4 \to 4 \quad 3 \to 3 \to 2 \quad 4 \to 1 \to 4$, making
+\[
+  AB = \begin{pmatrix}
+    1 & 2 & 3 & 4 \\
+    1 & 4 & 2 & 3 
+  \end{pmatrix}
+\]
+
+A more compact way to represent a permutation is by \href{https://en.wikipedia.org/wiki/Cyclic_permutation}{\textbf{Cyclic notation}, } where, for example, $A$ would be written as:
+\[
+  A = ( 1, 3 ,2 ) ( 4 ) =  (1, 3 ,2 ) = (2,1,3) = (3,2,1)
+\]
+
+This notation is particularly effective because the inverse $A^{-1} = (1,2,3)$ is found simply by inverting the order.
+\\
+It is also notable that every permutation can be decomposed in twp-elements cycle, for example $ A = (1,3)(3,2)$.
+\begin{definition}
+  For every permutation $P$ the \textbf{Sign of the permutation} is defined as:
+  \[
+    \text{sng(P)} = \begin{cases}  
+      +1 \quad  \text{if P is written as a product of \textbf{even} two-terms cycles} \\
+  -1 \quad \text{if P is written as product of \textbf{odd} two-term cycles}  
+\end{cases}
+  \]
+\end{definition}
+
+\begin{theorem}[Cayley's theorem]
+  Every group of order $N$ is isomorphic to some subgroup of $S_n$ (equivalently, homomorphic to $S_n$)
+\end{theorem}
+\begin{proof}
+  Let $G$ be a group with $|G| = N$.
+  \\
+  Let's consider $K = \{  \text{functions} f_g : x \to g \cdot x  \}$ the set of the \href{https://en.wikipedia.org/wiki/Group_action#Left_group_action}{left actions} of $G$ onto itself. Of course, K is a group with respect to function composition. These functions are \textbf{bijections}, because $\forall f_g \in K, \exists f_g^{-1} = f_g^{-1}$.
+  This proves that $K \subseteq S_N$. \\
+  Now it is sufficient to verify that the map $\rho : (G, \cdot) \to (K, \circ) \subset S_N$ which is a group homomorphism to prove the theorem
+\end{proof}
+
+\textbf{MISSING: BRAIDS GROUP AND PARTITIONS AND YONG DIAGRAMS}
+
+\subsection{Partitions and young diagrams}
+\begin{definition}
+  A cycle is called "reduced" if every element of the set only appears once.\\
+  For example:
+  \[
+    A = \begin{pmatrix}
+      1&2&3&4&5&6 \\ 
+      3&6&4&1&5&2
+    \end{pmatrix}
+    \quad \implies \quad
+    A = (1,3,4)(2,6)(5)
+  \]
+
+\end{definition}
+
+\begin{claim}
+  For a "reduced" cycle, if $n_i$ is the length of the $i-$th cycle, it is obvious that:
+  \[
+    \sum n_i = N
+  \]
+  hence $\{n_1,n_2,\dots \}$ is a \textbf{partition} of N.
+\end{claim}
+For a generic $n$, the number of its partitions is $p(n)$, which is found by the generating function:
+\[
+  \sum^{\infty}_{n=0} p(n)x^n =  \prod_{n=1}^{\infty} \frac{1}{1-x^n}
+\]
+
+An interesting way to represent partitions to use \textbf{Young Diagrams}; just like \href{https://en.wikipedia.org/wiki/Cuisenaire_rods}{\textit{regoli}}, if $N =5$, the partitions of $N$ are:
+\begin{center}
+  \ydiagram{5} \qquad \ydiagram{4,1} \qquad  \ydiagram{3,2} \qquad \ydiagram{2,2,1} \quad $\dots$
+\end{center}
 
